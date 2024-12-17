@@ -1,7 +1,7 @@
 # EtherVault Contract
 
 ## Overview
-EtherVault is a secure and efficient smart contract built on Solidity that allows users to deposit and withdraw Ether. The contract includes robust features such as restricted access for administrative functions, individual balance tracking, and event logging for transparency. It is a demonstration of Solidity skills and secure coding practices, showcasing your ability to design, deploy, and test smart contracts professionally.
+EtherVault is a secure and efficient smart contract built on Solidity that allows users to deposit and withdraw Ether. The contract includes robust features such as restricted access for administrative functions, individual balance tracking, and event logging for transparency. It is a demonstration of Solidity skills and secure coding practices, showcasing  ability to design, deploy, and test smart contracts professionally.
 
 ---
 ![Architecture of contract](ethervault.png)
@@ -42,7 +42,7 @@ EtherVault/
 ### Deploy the Contract
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/NishantCoder108/EtherVault.git
    cd EtherVault
    ```
 2. Deploy the contract:
