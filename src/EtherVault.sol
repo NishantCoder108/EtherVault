@@ -40,7 +40,21 @@ contract EtherVault {
 
         require(contractBalance > 0, "No ETH in contract");
 
-        payable(owner).transfer(contractBalance); //receive contract address balance to the owner
+        // payable(owner).transfer(contractBalance); //receive contract address balance to the owner
+        /**
+         * *Transfer method have fixed gas fees
+         * 
+        -----Key Differences Between transfer, send, and call:----
+
+        Method	  Gas    Limit	 Reverts on Failure	Return Value	Usage
+        transfer  2300  	Yes	    None	Simple and safe transfers.
+        send	  2300  	No  	bool (success/failure)	Use if you want to handle failures manually.
+        call	  All gas  No	(bool, bytes)	Flexible and preferred for modern contracts.
+
+         */
+
+        (bool success, ) = payable(owner).call{value: contractBalance}("");
+        require(success, "Transfer Failed");
     }
 
     function getBalance() external view returns (uint256) {
